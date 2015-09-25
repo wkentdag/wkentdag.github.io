@@ -1,0 +1,23 @@
+{
+  "name": "wkentdag.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wkentdag/wkentdag.github.io",
+  "authors": [
+    "Will Kent-Daggett <willkentdaggett@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/build/bower",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "p5.js": "p5js#~0.4.12"
+  }
+}

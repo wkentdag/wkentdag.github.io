@@ -1,0 +1,12 @@
+@import 'variables';
+
+
+h1, h2, h3, h4, h5, h6, p, span, a, li {
+  // transition: transform 0.5s;
+}
+
+
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover, p:hover, span:hover, a:hover, li:hover {
+  // color: red;
+  // transform: skewY(-10deg) rotate(45deg);
+}

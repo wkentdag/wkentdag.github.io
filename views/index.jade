@@ -1,0 +1,39 @@
+doctype html
+html
+head
+  title= title
+  //- link(rel='stylesheet' type='text/css' href='assets/build/bower_components/bootstrap/dist/css/bootstrap.min.css')
+  link(rel='stylesheet' type='text/css' href='assets/build/style/style.min.css')
+  meta(name='viewport' content="width=device-width, initial-scale=1")
+  meta(name='author' content='Will Kent-Daggett')
+
+body
+  .container-fluid
+    #header.row
+      .col-xs-12
+        h1
+          a(href='/')= title
+      #contact.col-xs-12
+        ul
+          each item in contact
+            if item.name == 'email'
+              - var mailUrl = 'mailto:' + item.url
+              li
+                a(href=mailUrl)= item.url
+            else
+              li= item.url
+          each item in profiles
+            li #{item.name}: 
+              a(target="_blank" href=item.url) #{item.usn}
+    #content
+      .row
+        .col-xs-12
+          p#about= about
+          
+      //- .row
+      //-   #projects.col-xs-12
+      //-     h1.projectsHeader
+      //-       a(href='#projects') &#8623; Projects
+
+  script(src='assets/build/bower/jquery/dist/jquery.min.js')
+  script(src='assets/build/scripts/scripts.min.js')
