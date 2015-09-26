@@ -1,23 +1,20 @@
 @import 'variables';
 
+.container {
+  width: 100%;
+  max-width: 1000px;
+  overflow-x: auto;
+  margin: auto;
+  // border: 1px dotted red;
+}
+
+
 #header {
+  margin-top: 10px;
   text-align: center;
 }
 
-#contact {
+
+#projects{
   text-align: center;
 }
-
-// #header {
-//   position: absolute;
-//   top: 0;
-//   height: $header-height;
-//   width: 100%;
-//   margin: auto;
-//   border: 1px solid red;
-// }
-//
-// #content {
-//   margin-top: $header-height;
-//   padding-top: 5%;
-// }

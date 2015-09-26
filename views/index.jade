@@ -2,38 +2,71 @@ doctype html
 html
 head
   title= title
-  //- link(rel='stylesheet' type='text/css' href='assets/build/bower_components/bootstrap/dist/css/bootstrap.min.css')
   link(rel='stylesheet' type='text/css' href='assets/build/style/style.min.css')
-  meta(name='viewport' content="width=device-width, initial-scale=1")
+  link(rel='stylesheet' href='assets/build/bower/font-awesome/css/font-awesome.min.css')
   meta(name='author' content='Will Kent-Daggett')
 
 body
-  .container-fluid
-    #header.row
-      .col-xs-12
-        h1
-          a(href='/')= title
-      #contact.col-xs-12
-        ul
-          each item in contact
+  .container
+    #header
+      h1
+        a(href='/')= title
+      ul
+        each item in contact
+          if item.name == 'email'
+            - var mailUrl = 'mailto:' + item.url
+            span
+              i.fa.fa-envelope-o
+          else if item.name == 'address'
+            span
+              i.fa.fa-map-marker
+
+          li
             if item.name == 'email'
-              - var mailUrl = 'mailto:' + item.url
-              li
-                a(href=mailUrl)= item.url
+              a(href=mailUrl)
+                span= item.url
             else
-              li= item.url
-          each item in profiles
+              span= item.url
+        each item in profiles
+          if item.name == 'GitHub'
+            span: i.fa.fa-github
+            li: a(target="_blank" href=item.url) #{item.usn}
+          else
             li #{item.name}: 
               a(target="_blank" href=item.url) #{item.usn}
-    #content
-      .row
-        .col-xs-12
-          p#about= about
+      p#about= about
           
-      //- .row
-      //-   #projects.col-xs-12
-      //-     h1.projectsHeader
-      //-       a(href='#projects') &#8623; Projects
+    #projects
+      h1
+        a(href='#projects') Projects &#8623; 
+      each proj in projects
+        .project
+        
+          h2= proj.name
+            if proj.url
+              span 
+                a(href=proj.url target='_blank') &#10548;
+          //- if !proj.url
+          //-   h2= proj.name
+          //- else
+          //-   a(href=proj.url)
+          //-     h2 #{proj.name} &#10548;
+          if proj.images
+            .images
+              table.images
+                tr
+                  each i in proj.images
+                    td
+                      a(href=i target='_blank')
+                        img(src=i)
+          p= proj.blurb
+            if proj.links
+              each l in proj.links
+                span 
+                  a(href=l.url target='_blank') #{l.link_text} &#8620;
+            if proj.source
+              span 
+                a(href=proj.source target='_blank') View on Github &#8620;
 
   script(src='assets/build/bower/jquery/dist/jquery.min.js')
   script(src='assets/build/scripts/scripts.min.js')

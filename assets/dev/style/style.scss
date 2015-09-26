@@ -6,22 +6,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: $font-header;
   border-bottom: 2px dotted;
   display: inline-block;
+  margin: auto;
 }
 
-h2, h3, h4, h5, h6 {
-  margin-top: 0 !important;
+h2 {
+  display: block !important;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+#projects h1 {
+  margin-bottom: 50px;
 }
 
 p, span, ul, li {
   font-family: $font-main;
 }
-
-p {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-}
-
 
 a {
   text-decoration: none;
@@ -30,36 +30,47 @@ a:visited {
   color: blue;
 }
 
-// h1 {
-//   a{
-//     color: inherit !important;
-//   }
-// }
+p {
+  float: clear;
+  padding: 10px;
+}
+
+p a:hover {
+  border-bottom: 2px solid $black;
+}
 
 li {
   display: inline-block;
   margin-left: 4px;
   margin-right: 4px;
   border-bottom: 2px solid;
-  // font-size: 0.7em;
 }
 
-ul.inline-list {
-  display: inline-block;
+ul {
   text-align: center;
   margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 0;
 }
 
-.category-header {
-  border-bottom: 2px solid;
+img {
+  height: 300px;
+  // width: 300px;
+  display: inline-block;
+  float: left;
+  border: 2px solid $black;
 }
 
-.subcategory {
-  margin-left: 15px;
+table.images {
+  border: 1 px dotted red;
+  float: clear;
+  text-align: center;
+  margin: auto;
+  margin-top: 20px;
 }
 
-
-.projectTitle {
-  border-bottom: 2px dotted;
-  margin-right: 5px;
+.images {
+  width: 100%;
+  overflow-x: auto;
 }
