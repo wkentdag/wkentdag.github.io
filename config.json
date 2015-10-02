@@ -54,7 +54,7 @@
       "blurb": "Simple static website for Minneapolis-based booking and management company.",
       "images": [
         "images/guilt-trip/landing.png",
-        "images/guilt-trip/sr.png"
+        "images/guilt-trip/gloss.png"
       ]
     },
     {
@@ -78,7 +78,7 @@
     {
       "name": "Sup",
       "source": "https://github.com/wkentdag/sup",
-      "blurb": "Privacy- and simplicity-oriented social network that allows users to temporarily share their current location to a subset of followers. Comprised of an API webserver and separate iOS client. Built with Node.js, Express, and Objecive-C. Developed during Software Design class at Macalester College, Spring 2014."
+      "blurb": "Privacy- and simplicity-oriented social network that allows users to temporarily share their current location to a subset of followers. Comprised of an API webserver and separate iOS client. Built with Node.js, Express, and Objective-C. Developed during Software Design class at Macalester College, Spring 2014."
     }
 
   ]
